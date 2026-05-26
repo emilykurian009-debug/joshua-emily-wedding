@@ -1451,9 +1451,11 @@
       pointer-events: none;
       z-index: 10;
     `;
-    cross.innerHTML = `<svg width="35" height="35" viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg">
-      <path d="M20 18v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4z" fill="#fdf5f5"/>
+    cross.innerHTML = `<svg width="20" height="20" viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg">
+     <path d="M20 1 L22 18 L39 20 L22 22 L20 39 L18 22 L1 20 L18 18 Z M20 10 L21 18 L29 10 L21 19 L20 10 Z" fill="#C0C0C0"/>
+      <path d="M29 10 L22 19 L30 29 L21 22 L11 30 L18 21 L10 11 L19 18 Z" fill="#C0C0C0" opacity="0.5"/>
     </svg>`;
+
     section.appendChild(cross);
 
     function sparkle(el) {
