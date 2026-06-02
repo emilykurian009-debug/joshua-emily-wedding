@@ -689,36 +689,36 @@
     .photo-section .section-label { color: var(--cream); }
     .photo-section .section-title { color: var(--cream); }
     .photo-section .gold-line {background: linear-gradient(to right, transparent, var(--cream), transparent);}
-    .photo-placeholder-grid {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      grid-template-rows: auto auto;
-      gap: 0.6rem;
-      margin-top: 1.8rem;
-      max-width: 340px;
-      margin-left: auto;
-      margin-right: auto;
+    .polaroid-stack {
+      position: relative;
+      width: 260px;
+      height: 300px;
+      margin: 2rem auto 0;
     }
-    .photo-placeholder {
-      aspect-ratio: 3/4;
-      background: linear-gradient(135deg, #e8c4cc, #d4909e);
-      border-radius: 2px;
-      display: flex; align-items: center; justify-content: center;
-      color: rgba(255,255,255,0.6); font-size: 1.4rem;
-      position: relative; overflow: hidden;
+    .polaroid {
+     position: absolute;
+     background: #fff;
+     padding: 10px 10px 32px;
+     box-shadow: 0 8px 28px rgba(0,0,0,0.3);
+     width: 
     }
-    .photo-placeholder::after {
-      content: '✦';
-      position: absolute; bottom: 0.4rem; right: 0.4rem;
-      font-size: 0.6rem; color: rgba(255,255,255,0.4);
+    .polaroid img {
+      width: 100%;
+      height: 170px;
+      object-fit: cover;
+      display: block;
     }
-    .photo-placeholder:nth-child(2) {
-      grid-row: span 2; aspect-ratio: auto;
+    .polaroid-back {
+      transform: rotate(-7deg);
+      top: 20px;
+      left: 0;
+      z-index: 1;
     }
-    .photo-caption {
-      font-family: 'Cormorant Garamond', serif;
-      font-style: italic; font-size: 0.95rem;
-      color: var(--text-light); margin-top: 1rem; letter-spacing: 0.04em;
+    .polaroid-front {
+      200px;transform: rotate(5deg);
+      top: 5px;
+      left: 55px;
+      z-index: 2;
     }
 
     /* ── LOVE NOTE ── */
@@ -1149,14 +1149,12 @@
       <h2 class="section-title">Our Story</h2>
       <div class="gold-line"></div>
     </div>
-    <div class="photo-placeholder-grid reveal">
-      <div class="photo-placeholder" style="background:linear-gradient(#b1757f,#ecafb9,#864a55);">
-        <img src="images/photo1.jpg" alt="Emily and Joshua" 
-          style="width:100%;height:100%;object-fit:cover;display:block;">
+    <div class="polaroid-stack reveal">
+      <div class="polaroid polaroid-back">
+        <img src="images/photo1.jpg" alt="Emily and Joshua">
       </div>
-      <div class="photo-placeholder" style="background:linear-gradient(#b1757f,#ecafb9,#864a55);">
-       <img src="images/photo2.jpg" alt="Emily and Joshua"
-         style="width:100%;height:100%;object-fit:cover;display:block;">
+      <div class="polaroid polaroid-front">
+        <img src="images/photo2.jpg" alt="Emily and Joshua">
       </div>
     </div>
   </div>
