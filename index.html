@@ -677,6 +677,38 @@
     }
     .venue-card .map-link:active { color: var(--gold); border-color: var(--gold); }
 
+    /* ── RSVP SECTION ── */
+.rsvp-section {
+  background: linear-gradient(135deg, #fdfaf9 0%, #f7e2e5 100%);
+  padding: 4rem 1.4rem;
+  text-align: center;
+  position: relative;
+}
+.rsvp-button {
+  margin-top: 1.6rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  min-height: var(--touch-min);
+  padding: 0.9rem 2.4rem;
+  background: linear-gradient(135deg, var(--gold) 0%, var(--brown) 100%);
+  color: var(--cream);
+  text-decoration: none;
+  font-family: 'Cinzel', serif;
+  font-size: 0.78rem;
+  letter-spacing: 0.2em;
+  font-weight: 600;
+  text-transform: uppercase;
+  border-radius: 2px;
+  box-shadow: 0 6px 20px rgba(160,57,74,0.35);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+.rsvp-button:active {
+  transform: scale(0.97);
+  box-shadow: 0 3px 10px rgba(160,57,74,0.35);
+}
+
     /* ── PHOTO SECTION ── */
     .photo-section {
       background: linear-gradient(150deg, #e4b3be 0%, #6e1c2e 100%);
@@ -1183,6 +1215,15 @@
       <cite>— Emily & Joshua</cite>
     </div>
   </div>
+
+  <div class="rsvp-section">
+  <div class="reveal">
+    <p class="section-label">Kindly Respond By 1 October</p>
+    <h2 class="section-title">RSVP</h2>
+    <div class="gold-line"></div>
+    <a href="https://docs.google.com/forms/d/e/1FAIpQLSf6kVzGzZhVkxhyWvqtKEl6pCkpW9Dzq7WW2uejRHA4VE2p0A/viewform?usp=header" target="_blank" rel="noopener" class="rsvp-button">RSVP Now</a>
+  </div>
+</div>
 
   <!-- CLOSING -->
   <div class="closing">
